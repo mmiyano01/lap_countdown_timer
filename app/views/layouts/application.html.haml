@@ -1,0 +1,10 @@
+!!!
+%html{lang: "ja", "xml:lang" => "ja", xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title Lap Countdown Timer
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = yield
