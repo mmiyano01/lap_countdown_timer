@@ -1,9 +1,25 @@
 %h2 Unlimited Lap Mode
-%p input seconds in a lap and interval
+%p input following
 
 =form_for @form, :url => {:action => 'work'} do |f|
-  =f.select :duration, count_select
-  =f.select :interval, count_select
-  =f.select :notif_time, count_select
+  %table
+    %tbody
+      %tr
+        %th
+          =f.label :duration, 'Duration'
+        %th
+          =f.label :interval, 'Interval'
+        %th
+          =f.label :interval, 'Notification'
+      %tr
+        %td
+          =f.select :duration, count_select
+          sec.
+        %td
+          =f.select :interval, count_select
+          sec.
+        %td
+          =f.select :notif_time, count_select
+          sec.
 
-  =f.submit '決定'
+  =f.submit 'Submit'
