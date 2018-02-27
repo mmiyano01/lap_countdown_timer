@@ -1,1 +1,8 @@
+%p(data-bind="text: duration()")
+%p(data-bind="text: interval()")
+%p(data-bind="text: notif_time()")
+%p(data-bind="text: rest_time")
+
+%button(data-bind="click: excute_timer('#{@form.duration}','#{@form.interval}','#{@form.notif_time}')")
+
 = link_to 'Back', root_path

@@ -10,11 +10,9 @@ class UnlimitedLapController < ApplicationController
   private
   def post_params
     params.require(:basic_setting_info_form).permit(
-        basic_setting_info_forms_attributes: [
-            :duration ,
-            :interval,
-            :notif_time
-        ]
+        :duration,
+        :interval,
+        :notif_time
     )
   end
 
