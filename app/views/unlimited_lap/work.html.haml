@@ -1,8 +1,8 @@
-%p(data-bind="text: duration()")
-%p(data-bind="text: interval()")
-%p(data-bind="text: notif_time()")
-%p(data-bind="text: rest_time")
+#unlimited_lap
+  .lap_box
+    %p.lap_count(data-bind="text: count()")
 
-%button(data-bind="click: excute_timer('#{@form.duration}','#{@form.interval}','#{@form.notif_time}')")
+  %p(data-bind="text: mode()")
+  %button(data-bind="click: function(e,t){excute_timer('#{@form.duration}','#{@form.interval}','#{@form.notif_time}')}") Excute
 
-= link_to 'Back', root_path
+  = link_to 'Back', root_path

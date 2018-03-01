@@ -1,0 +1,19 @@
+#unlimited_lap {
+  .lap_box {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    background: black;
+    border: solid #dedede;
+  }
+  .lap_count {
+    text-align: center;
+    font-size: 200px;
+    color: white;
+  }
+}
