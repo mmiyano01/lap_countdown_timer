@@ -26,4 +26,42 @@
     width: 400px;
     height: 50px;
   }
+  .color_box{
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin: auto;
+    width: 400px;
+    height: 30px;
+  }
+  .bk_red{
+    background: red;
+  }
+  .bk_green{
+    background: green;
+  }
+  .bk_yellow{
+    background: yellow;
+  }
+  .bk_blue{
+    background: blue;
+  }
+}
+
+.blinking{
+  -webkit-animation:blink 0.5s ease-in-out infinite alternate;
+  -moz-animation:blink 0.5s ease-in-out infinite alternate;
+  animation:blink 0.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-moz-keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
