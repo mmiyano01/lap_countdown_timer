@@ -15,17 +15,14 @@ class UnlimitedLapViewModel
     return
 
   constructor: ->
-    @duration = ko.observable("")
-    @interval = ko.observable("")
-    @notif_time = ko.observable("")
+    @duration = ko.observable(10)
+    @interval = ko.observable(10)
+    @notif_time = ko.observable(10)
     @count = ko.observable("")
     @mode = ko.observable("working")
 
-  excute_timer: (duration, interval, notif_time) ->
-    @count(duration)
-    @duration(duration)
-    @interval(interval)
-    @notif_time(notif_time)
+  excute_timer: ->
+    @count(@duration())
     _counter(@)
 
 $ ->

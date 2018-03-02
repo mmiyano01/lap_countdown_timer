@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'unlimited_lap#index'
-  post 'unlimited_lap/work' => 'unlimited_lap#work'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,25 +1,20 @@
 %h2 Unlimited Lap Mode
-%p input following
 
-=form_for @form, :url => {:action => 'work'} do |f|
-  %table
-    %tbody
-      %tr
-        %th
-          =f.label :duration, 'Duration'
-        %th
-          =f.label :interval, 'Interval'
-        %th
-          =f.label :interval, 'Notification'
-      %tr
-        %td
-          =f.select :duration, count_select
-          sec.
-        %td
-          =f.select :interval, count_select
-          sec.
-        %td
-          =f.select :notif_time, count_select
-          sec.
+%table
+  %tbody
+    %tr
+      %th Duration
+      %th Interval
+      %th Notification
+    %tr
+      %td
+        = select_tag :duration, options_for_select(count_select, params[:duration]), data: {bind: "value: duration, valueUpdate: 'keyup'"}
+        sec.
+      %td
+        = select_tag :interval, options_for_select(count_select, params[:interval]), data: {bind: "value: interval, valueUpdate: 'keyup'"}
+        sec.
+      %td
+        = select_tag :notif_time, options_for_select(count_select, params[:notif_time]), data: {bind: "value: notif_time, valueUpdate: 'keyup'"}
+        sec.
 
-  =f.submit 'Submit'
+= render partial:'unlimited_lap/count_display'
