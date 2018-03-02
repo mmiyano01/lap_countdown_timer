@@ -1,6 +1,8 @@
 #unlimited_lap
+  %p(data-bind="text: mode()")
   .lap_box
     %p.lap_count(data-bind="text: count()")
-
-  %p(data-bind="text: mode()")
-  %button(data-bind="click: function(e,t){excute_timer()}") Excute
+  .button_box
+    %button(data-bind="click: function(e,t){excute_timer()}") Start
+    %button(data-bind="click: function(e,t){stop_timer()}") Stop
+    %button(data-bind="click: function(e,t){reset_timer()}") Reset

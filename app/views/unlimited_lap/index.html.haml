@@ -8,13 +8,13 @@
       %th Notification
     %tr
       %td
-        = select_tag :duration, options_for_select(count_select, params[:duration]), data: {bind: "value: duration, valueUpdate: 'keyup'"}
+        %select(data-bind="options: #{count_select}, value: duration, optionsCaption: ''")
         sec.
       %td
-        = select_tag :interval, options_for_select(count_select, params[:interval]), data: {bind: "value: interval, valueUpdate: 'keyup'"}
+        %select(data-bind="options: #{count_select}, value: interval, optionsCaption: ''")
         sec.
       %td
-        = select_tag :notif_time, options_for_select(count_select, params[:notif_time]), data: {bind: "value: notif_time, valueUpdate: 'keyup'"}
+        %select(data-bind="options: #{count_select}, value: notif_time, optionsCaption: ''")
         sec.
 
 = render partial:'unlimited_lap/count_display'
