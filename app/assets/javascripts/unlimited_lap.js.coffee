@@ -7,6 +7,9 @@ class UnlimitedLapViewModel
     timer = setTimeout (-> _counter(that)), 1000
 
     #TODO play "notification" sound
+    if [15,10,5].includes(that["count"]())
+      console.log('sound')
+      #document.querySelector("#done_sound").play()
 
     if that["count"]() == 5
       that["color_box"]("bk_yellow")
