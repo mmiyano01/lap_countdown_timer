@@ -1,9 +1,13 @@
 #unlimited_lap
+  /=audio_tag("sound", id:'start_sound')
+  /=audio_tag("sound", id:'notif_sound')
+  /=audio_tag("sound", id:'done_sound')
+
   %p(data-bind="text: mode()")
   .color_box.blinking(data-bind="css: color_box()")
   .lap_box
     %p.lap_count(data-bind="text: count()")
   .button_box
-    %button(data-bind="click: function(e,t){excute_timer()}") Start
-    %button(data-bind="click: function(e,t){stop_timer()}") Stop
-    %button(data-bind="click: function(e,t){reset_timer()}") Reset
+    %button(class="start_button" data-bind="click: function(e,t){excute_timer()}") Start
+    %button(class="stop_button" data-bind="click: function(e,t){stop_timer()}") Stop
+    %button(class="reset_button" data-bind="click: function(e,t){reset_timer()}") Reset

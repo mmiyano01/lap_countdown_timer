@@ -65,3 +65,47 @@
   0% {opacity:0;}
   100% {opacity:1;}
 }
+
+
+button.start_button {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: #008000;
+  color: #fff;
+  border-style: none;
+}
+
+button.start_button:hover {
+  background-color: #00ff00;
+  color: #fff;
+}
+
+button.stop_button {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: #800000;
+  color: #fff;
+  border-style: none;
+}
+
+button.stop_button:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+button.reset_button {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: #248;
+  color: #fff;
+  border-style: none;
+}
+
+button.reset_button:hover {
+  align
+  background-color: #24d;
+  color: #fff;
+}
