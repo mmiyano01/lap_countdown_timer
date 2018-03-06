@@ -49,9 +49,9 @@
 }
 
 .blinking{
-  -webkit-animation:blink 0.5s ease-in-out infinite alternate;
-  -moz-animation:blink 0.5s ease-in-out infinite alternate;
-  animation:blink 0.5s ease-in-out infinite alternate;
+  -webkit-animation:blink 0.3s ease-in-out infinite alternate;
+  -moz-animation:blink 0.3s ease-in-out infinite alternate;
+  animation:blink 0.3s ease-in-out infinite alternate;
 }
 @-webkit-keyframes blink{
   0% {opacity:0;}
@@ -105,7 +105,6 @@ button.reset_button {
 }
 
 button.reset_button:hover {
-  align
   background-color: #24d;
   color: #fff;
 }
