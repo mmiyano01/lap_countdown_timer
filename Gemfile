@@ -36,8 +36,6 @@ gem 'haml'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 gem 'knockoutjs-rails'
-gem 'pg', groups: %w(production), require: false
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
