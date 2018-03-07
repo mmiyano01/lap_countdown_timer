@@ -40,6 +40,7 @@ class UnlimitedLapViewModel
     @color_box = ko.observable("bk_blue")
 
   excute_timer: ->
+    console.log('test')
     if @count() == null
       @count(@duration())
 
@@ -53,10 +54,12 @@ class UnlimitedLapViewModel
     _counter(@)
 
   stop_timer: ->
+    console.log('test2')
     noSleep.enable()
     clearTimeout(timer)
 
   reset_timer: ->
+    console.log('test3')
     @count(null)
     @mode("working")
     @color_box("bk_blue")

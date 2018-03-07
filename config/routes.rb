@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'unlimited_lap#index'
+  root 'main#menu'
+
+  get 'unlimited_lap/index' => 'unlimited_lap#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
