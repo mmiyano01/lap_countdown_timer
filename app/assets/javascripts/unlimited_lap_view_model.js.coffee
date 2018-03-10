@@ -7,24 +7,28 @@ class UnlimitedLapViewModel
     timer = setTimeout (-> _counter(that)), 1000
 
     #TODO play "notification" sound
-    if [15,10,5].includes(that["count"]())
-      console.log('sound')
-      #document.querySelector("#done_sound").play()
+    if that['mode']() == "working"
+      if [10].includes(that["count"]())
+        document.querySelector("#notif_sound").play()
 
     if that["count"]() == 5
+      if that["mode"]() == "interval"
+        document.querySelector("#notif_sound").play()
       that["color_box"]("bk_yellow")
 
-    if that["count"]() == 0
+    if that['count']() == 0
+      if that["mode"]() == "working"
+        document.querySelector("#done_sound").play()
+      if that["mode"]() == "interval"
+        document.querySelector("#start_sound").play()
+
+    if that["count"]() < 0
       clearTimeout(timer)
       if that["mode"]() == "working"
-        #TODO play "done" sound
-        #document.querySelector("#done_sound").play()
         that["count"](that["interval"]())
         that["mode"]("interval")
         that["color_box"]("bk_green")
       else if that["mode"]() == "interval"
-        #TODO play "start" sound
-        #document.querySelector("#start_sound").play()
         that["count"](that["duration"]())
         that["mode"]("working")
         that["color_box"]("bk_red")
