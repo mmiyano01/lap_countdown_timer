@@ -9,19 +9,17 @@ class UnlimitedLapViewModel
     #TODO play "notification" sound
     if that['mode']() == "working"
       if [10].includes(that["count"]())
-        document.querySelector("#notif_sound").play()
-
+        play_sound("#notif_sound")
     if that["count"]() == 5
       if that["mode"]() == "interval"
-        document.querySelector("#notif_sound").play()
+        play_sound("#notif_sound")
       that["color_box"]("bk_yellow")
 
     if that['count']() == 0
       if that["mode"]() == "working"
-        document.querySelector("#done_sound").play()
+        play_sound("#done_sound")
       if that["mode"]() == "interval"
-        document.querySelector("#start_sound").play()
-
+        play_sound("#start_sound")
     if that["count"]() < 0
       clearTimeout(timer)
       if that["mode"]() == "working"
@@ -65,6 +63,11 @@ class UnlimitedLapViewModel
     @mode("working")
     @color_box("bk_blue")
 
-
+  play_sound = (key) ->
+    sound = document.querySelector(key)
+    window.audio = new Audio();
+    window.audio.src = sound.src
+    window.audio.play()
+    
 $ ->
   ko.applyBindings new UnlimitedLapViewModel()
